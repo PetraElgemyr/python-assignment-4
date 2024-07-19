@@ -19,15 +19,12 @@ isCorrectSentence = False
 def validateInput(inputString):
     if len(inputString) < 1:
         print("Du måste skriva något.")
-        print("check 1")
         return False
 
     elif len(inputString.split()) < 2:
-        print("check 2")
         print("Du måste skriva minst två ord.")
         return False
 
-    print("check 3")
     words = inputString.split()
     for word in words:
         if not any(char.isalpha() for char in word):
