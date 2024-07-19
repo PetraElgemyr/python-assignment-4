@@ -6,11 +6,14 @@ där det talar om hur många ord användaren skrev in
 och vilket som det första och det sista ordet. 
 
 Planering
-input -> trimma bort whitespace runtom -> validering för att se om det är minst två ord, 
-om inte så upprepa loop med input, annars analysera mening -> dela upp meningen till ord i lista 
--> output med första, sista och antalet ord.
+För att hantera felaktik input måste inputen vara i en while-loop.
+Det behövs valideringskod som ska kolla om inputen är korrekt varje gång användaren skriver in något.
 
 
+
+Ta emot input -> Trimma bort whitespace runtom -> Validera för att se om det är minst två ord, 
+om inte så upprepa loop med input -> Vid korrekt input, dela upp meningen till en lista med orden
+-> Skriv ut antalet ord, första och sista ordet.
 """
 
 isCorrectSentence = False
