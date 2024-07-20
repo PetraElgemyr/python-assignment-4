@@ -10,10 +10,15 @@ För att hantera felaktik input måste inputen vara i en while-loop.
 Det behövs valideringskod som ska kolla om inputen är korrekt varje gång användaren skriver in något.
 
 
-
 Ta emot input -> Trimma bort whitespace runtom -> Validera för att se om det är minst två ord, 
 om inte så upprepa loop med input -> Vid korrekt input, dela upp meningen till en lista med orden
 -> Skriv ut antalet ord, första och sista ordet.
+
+Begränsningar
+Valideringen brister i att den kollar om ett ord innehåller bokstäver från alfabetet, men inte att det
+faktiskt blir ett ord. Exempelvis skulle 'f24.sr9' gå igenom valideringen som ett ord då det innehåller bokstäver. 
+Programmet accepterar alla teckenföljder som innehåller bokstäver, även om det inte är ett ord. 
+
 """
 
 isCorrectSentence = False
@@ -43,6 +48,12 @@ while isCorrectSentence is False:
 
 sentence = sentence.strip()
 list = sentence.split()
-print("Du skrev " + str(len(list)) + " ord.")
-print("Första ordet är " + list[0] + ".")
-print("Sista ordet du skrev är " + list[-1] + ".")
+print(
+    "Du skrev "
+    + str(len(list))
+    + " ord. \nDet första ordet är "
+    + list[0]
+    + ". \nDet sista ordet du skrev är "
+    + list[-1]
+    + "."
+)
